@@ -107,13 +107,19 @@ public class DoublyLinkedList {
             yedek = yedek.ileri;
             if(yedek == null){
                 System.out.println("Boş");
+                break;
             }
         }
         if (yedek == bas) {
             bas = yedek.ileri ;
+            System.out.println("Silme işlemi başarılı");
         }
-        else {
+        else if(yedek!=null && yedek.sayi==aranan) {
             yedek.geri.ileri = yedek.ileri;
+            System.out.println("Silme işlemi başarılı");
+        }
+        else{
+             System.out.println("Silinecek eleman bulunamadı");
         }
     }
     
